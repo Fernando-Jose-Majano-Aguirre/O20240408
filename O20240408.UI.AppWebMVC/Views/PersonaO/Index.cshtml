@@ -1,0 +1,83 @@
+﻿@model IEnumerable<O20240408.EntidadesDeNegocio.PersonaO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form asp-action="Index">
+    <div class="row">
+        <div class="form-group col-3">
+            <label class="control-label">Nombre</label>
+            <input type="text" name="nombreO" class="form-control" />
+        </div>
+        <div class="form-group col-3">
+            <label class="control-label">Apellido</label>
+            <input type="text" name="apellidoO" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-12">
+            <input type="submit" value="Buscar" class="btn btn-primary" />
+            <a asp-action="Create" class="btn btn-primary">Crear</a>
+        </div>
+    </div>
+</form>
+<p>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SueldoO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComentarioO)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SueldoO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComentarioO)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

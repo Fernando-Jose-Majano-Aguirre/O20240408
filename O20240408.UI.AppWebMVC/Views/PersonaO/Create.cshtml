@@ -1,0 +1,62 @@
+﻿@model O20240408.EntidadesDeNegocio.PersonaO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PersonaO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        
+        <form asp-action="Create">
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label asp-for="NombreO" class="control-label"></label>
+                    <input asp-for="NombreO" class="form-control" />
+                    <span asp-validation-for="NombreO" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ApellidoO" class="control-label"></label>
+                    <input asp-for="ApellidoO" class="form-control" />
+                    <span asp-validation-for="ApellidoO" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label asp-for="SueldoO" class="control-label"></label>
+                    <input asp-for="SueldoO" class="form-control" />
+                    <span asp-validation-for="SueldoO" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="status" class="control-label"></label>
+                    <input asp-for="status" class="form-control" />
+                    <span asp-validation-for="status" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="ComentarioO" class="control-label"></label>
+                <input asp-for="ComentarioO" class="form-control" />
+                <span asp-validation-for="ComentarioO" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn-outline-primary" asp-action="Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
