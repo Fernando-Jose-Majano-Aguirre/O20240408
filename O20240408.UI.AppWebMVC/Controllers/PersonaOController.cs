@@ -8,7 +8,7 @@ namespace O20240408.UI.AppWebMVC.Controllers
     public class PersonaOController : Controller
     {
         readonly PersonaOBL _personaOBL;
-        public PersonaOController(PersonaOBL personasO)
+        public PersonaOController(PersonaOBL personasO) 
         {
             _personaOBL = personasO;
         }
