@@ -11,7 +11,7 @@ namespace O20240408.AccesoADatos
     public class PersonaODAL
     {
         readonly AppDbContext _appDbContext;
-        public PersonaODAL(AppDbContext appDbContext)
+        public PersonaODAL(AppDbContext appDbContext) 
         {
             _appDbContext = appDbContext;
         }
