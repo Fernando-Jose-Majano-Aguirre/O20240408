@@ -12,7 +12,7 @@ namespace O20240408.EntidadesDeNegocio
     public class PersonaO
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public int Id { get; set; }
         [Required(ErrorMessage ="El campo {0} es requerido"), MaxLength(50)]
         [Display(Name ="Nombre")]
