@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace O20240408.LogicaDeNegocio
 {
-    public class PersonaOBL
+    public class PersonaOBL 
     {
         readonly PersonaODAL _personaODAL;
         public PersonaOBL(PersonaODAL personaODAL)
